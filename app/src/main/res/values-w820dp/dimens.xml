@@ -1,0 +1,5 @@
+<resources>
+    <dimen name="activity_horizontal_margin">64dp</dimen>
+    <dimen name="margin_login_btn">5dp</dimen>
+    <dimen name="width_login_btn">72dp</dimen>
+</resources>

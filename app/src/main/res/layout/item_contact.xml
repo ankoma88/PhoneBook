@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    card_view:cardBackgroundColor="@color/primary_light"
+    card_view:cardPreventCornerOverlap="false"
+    card_view:cardUseCompatPadding="true"
+    card_view:contentPadding="2dp"
+    card_view:cardElevation="5dp"
+    card_view:cardCornerRadius="6dp">
+
+<LinearLayout
+    android:id="@+id/contact_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:paddingEnd="@dimen/contact_item_padding"
+    android:paddingLeft="@dimen/contact_item_padding"
+    android:paddingRight="@dimen/contact_item_padding"
+    android:paddingStart="@dimen/contact_item_padding"
+    android:paddingTop="@dimen/contact_item_padding"
+    >
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/ivPhoto"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:scaleType="fitCenter"
+        android:layout_margin="5dp"
+        fresco:roundedCornerRadius="50dp"
+        fresco:roundWithOverlayColor="@color/primary_light"
+        fresco:roundingBorderWidth="1dp"
+        fresco:roundingBorderColor="@color/colorPrimaryDark"
+        fresco:placeholderImage="@android:drawable/ic_menu_camera"/>
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/userDescriptionView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:layout_marginStart="16dp"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/tvName"
+            tools:text="Jack Daniels"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="marquee"
+            android:singleLine="true"
+            android:textColor="@color/primary_text"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/tvPhone"
+            style="@style/TextAppearance.AppCompat.Small"
+            tools:text="+380685550422"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/secondary_text"
+            android:singleLine="true"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/ivSMS"
+        android:layout_width="@dimen/size_contact_photo"
+        android:layout_height="@dimen/size_contact_photo"
+        android:layout_margin="5dp"
+        android:layout_gravity="center"
+        android:src="@android:drawable/ic_menu_send"
+        android:visibility="visible"
+        tools:visibility="visible" />
+
+
+    <ImageView
+        android:id="@+id/ivCall"
+        android:layout_width="@dimen/size_contact_photo"
+        android:layout_height="@dimen/size_contact_photo"
+        android:layout_margin="5dp"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_call"
+        android:visibility="visible"
+        tools:visibility="visible" />
+</LinearLayout>
+</android.support.v7.widget.CardView>

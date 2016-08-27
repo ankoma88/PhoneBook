@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary_light"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/activity_horizontal_margin"
+            android:orientation="vertical">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/ivPhoto"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:scaleType="centerCrop"
+                android:layout_margin="5dp"
+                fresco:roundedCornerRadius="50dp"
+                fresco:roundWithOverlayColor="@color/primary_light"
+                fresco:roundingBorderWidth="1dp"
+                fresco:roundingBorderColor="@color/colorPrimary"
+                fresco:placeholderImage="@android:drawable/ic_menu_camera"/>
+
+            <EditText
+                android:id="@+id/etName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/name"
+                android:textColor="@color/et_colors"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/etPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/phone"
+                android:textColor="@color/et_colors"
+                android:inputType="phone" />
+
+            <EditText
+                android:id="@+id/etEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:hint="@string/email"
+                android:textColor="@color/et_colors"
+                android:inputType="textEmailAddress" />
+
+            <EditText
+                android:id="@+id/etWebsite"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fitsSystemWindows="true"
+                android:gravity="top"
+                android:hint="@string/website"
+                android:textColor="@color/et_colors"
+                android:inputType="textUri"
+                android:layout_marginTop="5dp"
+                android:singleLine="false" />
+
+            <Button
+                android:id="@+id/btnDone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:background="@color/colorPrimaryDark"
+                android:paddingLeft="70dp"
+                android:paddingRight="70dp"
+                android:text="@string/done"
+                android:textColor="@color/icons" />
+
+            <LinearLayout
+                android:id="@+id/llButtons"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                android:paddingBottom="10dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/ivSMS"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="28dp"
+                    android:layout_margin="15dp"
+                    android:layout_gravity="center"
+                    android:src="@android:drawable/ic_menu_send"
+                    android:visibility="visible"/>
+
+
+                <ImageView
+                    android:id="@+id/ivCall"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="28dp"
+                    android:layout_margin="15dp"
+                    android:src="@drawable/ic_call"
+                    android:visibility="visible"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
